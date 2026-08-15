@@ -62,7 +62,7 @@ export function measurementInsights(measurements: BodyMeasurement[] = []): Measu
       measurement: rule.label,
       summary: measurement.value + " " + measurement.unit + " · " + (measurement.confidence ?? "confidence not supplied") + " confidence",
       clinicalContext: needsReview
-        ? rule.context + ". This value crosses the bundled review threshold and should be confirmed with an appropriate clinical instrument."
+        ? rule.context + ". This value crosses the configured review threshold and should be confirmed with an appropriate clinical instrument."
         : rule.context + ". Approximate device measurement; confirm before clinical decisions.",
       severity: needsReview ? "review" as const : "information" as const,
     }];
@@ -71,3 +71,25 @@ export function measurementInsights(measurements: BodyMeasurement[] = []): Measu
 
 export const measurementAccuracyNotice = rules.accuracyNotice;
 export const supportedMeasurementNames = Object.keys(supported);
+export const supportedMeasurementDefinitions = Object.entries(supported).map(([name, rule]) => ({name, ...rule}));
+
+export function createManualMeasurements(values: Record<string, string>, method: string): BodyMeasurement[] {
+  return Object.entries(values).flatMap(([name, raw]) => {
+    const rule = supported[name];
+    if (!rule || !raw.trim()) return [];
+    const value = Number(raw);
+    const maximum = rule.unit === "degree" ? 180 : rule.unit === "cm" ? 300 : 1000;
+    if (!Number.isFinite(value) || value <= 0 || value > maximum) {
+      throw new Error(`${rule.label} must be greater than 0 and no more than ${maximum} ${rule.unit}.`);
+    }
+    return [{
+      name,
+      value,
+      unit: rule.unit as BodyMeasurement["unit"],
+      confidence: "unknown" as const,
+      method,
+      capturedAt: new Date().toISOString(),
+      source: "manual" as const,
+    }];
+  });
+}

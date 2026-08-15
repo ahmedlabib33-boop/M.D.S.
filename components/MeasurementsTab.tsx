@@ -2,7 +2,7 @@
 
 import { useState, type ChangeEvent, type Dispatch, type SetStateAction } from "react";
 import type { PatientContext } from "@/lib/types";
-import { measurementAccuracyNotice, parseMeasurementImport, supportedMeasurementNames } from "@/lib/measurements";
+import { createManualMeasurements, measurementAccuracyNotice, parseMeasurementImport, supportedMeasurementDefinitions } from "@/lib/measurements";
 
 type MeshMeta = {name: string; size: number; type: string};
 
@@ -12,20 +12,42 @@ export default function MeasurementsTab({context, setContext}: {
 }) {
   const [notice, setNotice] = useState(measurementAccuracyNotice);
   const [error, setError] = useState("");
+  const [savedMessage, setSavedMessage] = useState("");
+  const [manualValues, setManualValues] = useState<Record<string, string>>({});
+  const [method, setMethod] = useState("iPhone Measure app or manual measuring tool");
   const [meshFiles, setMeshFiles] = useState<MeshMeta[]>([]);
+
+  function saveGuidedMeasurements() {
+    setError("");
+    setSavedMessage("");
+    try {
+      const additions = createManualMeasurements(manualValues, method);
+      if (additions.length === 0) throw new Error("Enter at least one measurement.");
+      setContext((current) => {
+        const names = new Set(additions.map((item) => item.name));
+        const retained = (current.measurements ?? []).filter((item) => !names.has(item.name));
+        return {...current, measurements: [...retained, ...additions]};
+      });
+      setSavedMessage(`${additions.length} measurement${additions.length === 1 ? "" : "s"} saved to the active patient record.`);
+    } catch (reason) {
+      setError(reason instanceof Error ? reason.message : "Measurements could not be saved.");
+    }
+  }
 
   async function importJson(event: ChangeEvent<HTMLInputElement>) {
     const file = event.target.files?.[0];
     if (!file) return;
     setError("");
+    setSavedMessage("");
     if (file.size > 1_000_000) {
-      setError("The measurement JSON exceeds the 1 MB session limit.");
+      setError("The measurement file exceeds the 1 MB limit.");
       return;
     }
     try {
       const parsed = parseMeasurementImport(JSON.parse(await file.text()));
       setContext((current) => ({...current, measurements: parsed.measurements}));
       setNotice(parsed.notice);
+      setSavedMessage(`${parsed.measurements.length} iPhone measurement${parsed.measurements.length === 1 ? "" : "s"} imported. No JSON editing was required.`);
     } catch (reason) {
       setError(reason instanceof Error ? reason.message : "Invalid measurement file.");
     }
@@ -46,40 +68,40 @@ export default function MeasurementsTab({context, setContext}: {
   return (
     <section className="workspacePanel panel">
       <div className="panelHeader">
-        <div><span className="sectionLabel">Native iOS → private browser session</span><h2>iPhone 15 Pro Max measurements</h2></div>
-        <span className="sourceBadge">ARKit · LiDAR · TrueDepth</span>
-      </div>
-      <div className="measurementWorkflow">
-        <article><b>01</b><strong>Capture in the native Swift companion</strong><p>Safari does not expose clinical ARKit/LiDAR capture APIs. The included Swift source performs capture on the device.</p></article>
-        <article><b>02</b><strong>Export through Files or Share Sheet</strong><p>The companion exports the versioned JSON contract and optional USDZ/PLY mesh.</p></article>
-        <article><b>03</b><strong>Select the file in iOS Safari</strong><p>The Vercel app validates it locally and keeps it only for this browser session.</p></article>
+        <div><span className="sectionLabel">Easy entry first · advanced import optional</span><h2>Body and iPhone measurements</h2></div>
+        <span className="sourceBadge">Manual · Measure app · ARKit</span>
       </div>
 
-      <div className="uploadGrid">
-        <label className="dropZone">
-          <span>Measurement JSON</span><strong>Select exported .json</strong><small>iOS Files picker compatible · maximum 1 MB</small>
-          <input type="file" accept=".json,application/json" onChange={importJson} />
-        </label>
-        <label className="dropZone">
-          <span>Optional 3D geometry</span><strong>Select USDZ or PLY</strong><small>Metadata is displayed locally; the mesh is not uploaded or persisted.</small>
-          <input type="file" multiple accept=".usdz,.ply,model/vnd.usdz+zip,application/octet-stream" onChange={selectMesh} />
-        </label>
-      </div>
+      <div className="simpleMeasurementIntro"><strong>No JSON knowledge is needed.</strong><p>Measure only what you actually have, enter the number beside its unit, then save. For greater repeatability, keep the same posture, landmark and measuring method each time.</p></div>
 
+      <label className="methodChoice">How were these values measured?<select value={method} onChange={(event) => setMethod(event.target.value)}><option>iPhone Measure app or manual measuring tool</option><option>Tape measure or ruler</option><option>Clinical instrument</option></select></label>
+      <div className="guidedMeasurementGrid">
+        {supportedMeasurementDefinitions.map((item) => <label key={item.name}><span>{item.label}<small>{item.context}</small></span><span className="unitInput"><input inputMode="decimal" type="number" min="0" step="0.1" value={manualValues[item.name] ?? ""} onChange={(event) => setManualValues((current) => ({...current, [item.name]: event.target.value}))} aria-label={`${item.label} in ${item.unit}`} /><b>{item.unit}</b></span></label>)}
+      </div>
+      <button className="primaryButton measurementSave" onClick={saveGuidedMeasurements}>Save entered measurements</button>
+      {savedMessage && <p className="successText">{savedMessage}</p>}
       {error && <p className="errorText">{error}</p>}
       <p className="cautionText">{notice}</p>
 
-      <div className="measurementData">
-        <div>
-          <h3>Accepted measurement contract</h3>
-          <div className="chipRow">{supportedMeasurementNames.map((name) => <code className="dataChip" key={name}>{name}</code>)}</div>
-          <a className="secondaryLink" href="/downloads/ios-measurement-contract.schema.json" download>Download JSON Schema</a>
+      <details className="advancedMeasurements">
+        <summary>Advanced iPhone companion import</summary>
+        <div className="measurementWorkflow" style={{gridTemplateColumns: "repeat(auto-fit, minmax(210px, 1fr))"}}>
+          <article><b>01</b><strong>Capture</strong><p>Use the native Swift companion maintained in the repository. Safari cannot directly expose raw LiDAR or ARKit capture.</p></article>
+          <article><b>02</b><strong>Share</strong><p>Choose Export in the companion and save the generated file to Files or the Share Sheet.</p></article>
+          <article><b>03</b><strong>Import</strong><p>Select that file below. The app validates and reads it automatically.</p></article>
         </div>
+        <div className="uploadGrid">
+          <label className="dropZone"><span>iPhone measurement file</span><strong>Select exported .json</strong><small>Choose the file; do not edit its contents.</small><input type="file" accept=".json,application/json" onChange={importJson} /></label>
+          <label className="dropZone"><span>Optional 3D geometry</span><strong>Select USDZ or PLY</strong><small>Metadata only; the mesh is not clinically interpreted.</small><input type="file" multiple accept=".usdz,.ply,model/vnd.usdz+zip,application/octet-stream" onChange={selectMesh} /></label>
+        </div>
+      </details>
+
+      <div className="measurementData single">
         <div>
-          <h3>Current session measurements</h3>
-          {(context.measurements ?? []).length === 0 ? <p>No measurement file imported.</p> : context.measurements?.map((item) => <article className="measurementRow" key={item.name}><strong>{item.name.replaceAll("_", " ")}</strong><span>{item.value} {item.unit}</span><small>{item.method} · {item.confidence}</small></article>)}
+          <h3>Saved measurements</h3>
+          {(context.measurements ?? []).length === 0 ? <p>No measurements saved for the active patient.</p> : context.measurements?.map((item) => <article className="measurementRow" key={item.name}><strong>{supportedMeasurementDefinitions.find((entry) => entry.name === item.name)?.label ?? item.name.replaceAll("_", " ")}</strong><span>{item.value} {item.unit}</span><small>{item.method} · {item.confidence ?? "unknown"} confidence</small></article>)}
           {meshFiles.map((file) => <article className="measurementRow" key={file.name}><strong>{file.name}</strong><span>{file.type}</span><small>{(file.size / 1024 / 1024).toFixed(2)} MB · local metadata only</small></article>)}
-          {((context.measurements?.length ?? 0) > 0 || meshFiles.length > 0) && <button className="textButton dangerText" onClick={() => {setContext((current) => ({...current, measurements: []}));setMeshFiles([]);}}>Clear session measurements</button>}
+          {((context.measurements?.length ?? 0) > 0 || meshFiles.length > 0) && <button className="textButton dangerText" onClick={() => {if (window.confirm("Clear all measurements for the active patient?")) {setContext((current) => ({...current, measurements: []}));setMeshFiles([]);setManualValues({});}}}>Clear measurements</button>}
         </div>
       </div>
     </section>

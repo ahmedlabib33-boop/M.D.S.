@@ -41,7 +41,7 @@ const DietarySchema = z.object({
 
 const Schema = z.object({
   age: z.number().min(0).max(125).optional(),
-  sex: z.enum(["female", "male", "intersex", "unknown"]).optional(),
+  sex: z.enum(["female", "male"]).optional(),
   pregnant: z.boolean().nullable().optional(),
   duration: z.string().max(200).optional(),
   symptoms: z.string().min(2).max(6000),

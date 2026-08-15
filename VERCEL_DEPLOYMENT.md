@@ -50,7 +50,7 @@ Verify `/api/health` after deployment. It reports whether full HPO, disease mapp
 
 ## iOS compatibility
 
-The Vercel web interface accepts versioned JSON selected through Safari, Files, or the iOS Share Sheet. Native ARKit capture remains in the preserved Swift companion. The server validates JSON statelessly and stores no patient measurement record.
+The Vercel web interface provides guided measurement fields and also accepts versioned JSON selected through Safari, Files, or the iOS Share Sheet. Native ARKit capture remains in the preserved Swift companion. Validation routes stay stateless; accepted measurements are saved only in the selected patient's browser-local IndexedDB record on that device.
 
 ## Production governance before clinical use
 

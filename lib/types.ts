@@ -1,4 +1,4 @@
-export type Sex = "female" | "male" | "intersex" | "unknown";
+export type Sex = "female" | "male";
 
 export interface VitalSignsInput {
   temperatureC?: number;
@@ -184,4 +184,23 @@ export interface AnalysisResponse {
   };
   sources: KnowledgeSourceRecord[];
   provenance: Array<{source: string; detail: string; url?: string}>;
+}
+
+export interface PatientRecord {
+  schemaVersion: 1;
+  id: string;
+  name: string;
+  sex: Sex;
+  createdAt: string;
+  updatedAt: string;
+  context: PatientContext;
+  assessments: AnalysisResponse[];
+}
+
+export interface PatientVaultBackup {
+  schemaVersion: 1;
+  exportedAt: string;
+  creator: "Developed & Created | Eng. Ahmed Labib";
+  storageNotice: string;
+  patients: PatientRecord[];
 }
