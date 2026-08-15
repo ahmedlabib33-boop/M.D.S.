@@ -1,0 +1,27 @@
+{
+  "generated_at": "2026-08-15",
+  "purpose": "Educational clinical decision-support. Not a diagnostic device.",
+  "medical_authorship_notice": "Eng. Ahmed Labib created and engineered the software platform. He did not author the external medical knowledge. Medical content is attributed to the independent sources listed below.",
+  "knowledge_sources": [
+    {"id":"hpo","name":"Human Phenotype Ontology","release":"v2026-06-23 configured","role":"Whole-body standardized phenotype vocabulary and phenotype-to-disease annotations","url":"https://hpo.jax.org/","access":"bundled"},
+    {"id":"medlineplus","name":"MedlinePlus / U.S. National Library of Medicine","release":"current official web service","role":"Patient-education health-topic retrieval","url":"https://medlineplus.gov/","access":"live"},
+    {"id":"who-umd","name":"WHO Unified Medical Dictionary","release":"online fifth edition reference","role":"English-Arabic medical terminology reference; not bulk redistributed","url":"https://umd.emro.who.int/WHODictionary/Home/AboutUs","access":"reference"},
+    {"id":"rxnorm","name":"RxNorm / U.S. National Library of Medicine","release":"current official API","role":"Medication name normalization and identifiers","url":"https://lhncbc.nlm.nih.gov/RxNav/APIs/RxNormAPIs.html","access":"live"},
+    {"id":"dailymed","name":"DailyMed / U.S. National Library of Medicine","release":"current Structured Product Label service","role":"Links to current official medication labeling","url":"https://dailymed.nlm.nih.gov/dailymed/","access":"live"},
+    {"id":"usda-fdc","name":"USDA FoodData Central","release":"current official API/download data","role":"Food composition and nutrient reference","url":"https://fdc.nal.usda.gov/","access":"optional"},
+    {"id":"dga","name":"Dietary Guidelines for Americans","release":"2025-2030","role":"General food-pattern guidance","url":"https://odphp.health.gov/our-work/nutrition-physical-activity/dietary-guidelines","access":"reference"},
+    {"id":"nih-ods","name":"NIH Office of Dietary Supplements","release":"current fact sheets and nutrient references","role":"Nutrient reference and supplement safety context","url":"https://ods.od.nih.gov/","access":"reference"},
+    {"id":"cummings","name":"Cummings Otolaryngology: Head & Neck Surgery","release":"source named by original ENT knowledge base","role":"Specialist ENT reference","access":"reference"},
+    {"id":"scott-brown","name":"Scott-Brown's Otorhinolaryngology, Head and Neck Surgery","release":"source named by original ENT knowledge base","role":"Specialist ENT reference","access":"reference"},
+    {"id":"aao-hns","name":"American Academy of Otolaryngology-Head and Neck Surgery guidelines","release":"verify current guideline for clinical use","role":"ENT guideline reference","url":"https://www.entnet.org/quality-practice/quality-products/clinical-practice-guidelines/","access":"reference"},
+    {"id":"nice-cks","name":"NICE Clinical Knowledge Summaries","release":"verify current topic for clinical use","role":"Primary-care clinical reference","url":"https://cks.nice.org.uk/","access":"reference"},
+    {"id":"ent-kb","name":"Original structured ENT knowledge base","release":"1.0","role":"User-provided specialist educational reference; preserved with its limitations","access":"bundled"}
+  ],
+  "ml_models": [
+    {"model":"Xenova/multilingual-e5-small","role":"Optional free browser-side multilingual semantic retrieval","type":"pretrained neural embedding model"},
+    {"model":"intfloat/multilingual-e5-large","role":"Optional hosted multilingual semantic retrieval","type":"pretrained neural embedding model"},
+    {"model":"sentence-transformers/embeddinggemma-300m-medical","role":"Optional hosted medical evidence retrieval","type":"pretrained medical embedding model"},
+    {"model":"AI_MODEL via Vercel AI Gateway","role":"Optional structured feature extraction and evidence-grounded bilingual explanation","type":"configurable pretrained language model"}
+  ],
+  "creator": {"display":"Developed & Created | Eng. Ahmed Labib","name":"Eng. Ahmed Labib","role":"Software platform creator and engineer; not the author of the external medical knowledge"}
+}

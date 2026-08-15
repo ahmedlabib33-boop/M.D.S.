@@ -1,0 +1,602 @@
+[
+  {
+    "id": "HP:0001945",
+    "label": "Fever",
+    "arabic": "حمى",
+    "synonyms": []
+  },
+  {
+    "id": "HP:0002018",
+    "label": "Nausea",
+    "arabic": "غثيان",
+    "synonyms": []
+  },
+  {
+    "id": "HP:0002013",
+    "label": "Vomiting",
+    "arabic": "قيء",
+    "synonyms": []
+  },
+  {
+    "id": "HP:0002027",
+    "label": "Abdominal pain",
+    "arabic": "ألم بطني",
+    "synonyms": []
+  },
+  {
+    "id": "HP:0002315",
+    "label": "Headache",
+    "arabic": "صداع",
+    "synonyms": []
+  },
+  {
+    "id": "HP:0002321",
+    "label": "Vertigo",
+    "arabic": "دوار",
+    "synonyms": []
+  },
+  {
+    "id": "HP:0001250",
+    "label": "Seizure",
+    "arabic": "نوبة صرعية",
+    "synonyms": []
+  },
+  {
+    "id": "HP:0001290",
+    "label": "Generalized hypotonia",
+    "arabic": "نقص التوتر العضلي المعمم",
+    "synonyms": []
+  },
+  {
+    "id": "HP:0001324",
+    "label": "Muscle weakness",
+    "arabic": "ضعف عضلي",
+    "synonyms": []
+  },
+  {
+    "id": "HP:0002094",
+    "label": "Dyspnea",
+    "arabic": "ضيق التنفس",
+    "synonyms": []
+  },
+  {
+    "id": "HP:0012735",
+    "label": "Cough",
+    "arabic": "سعال",
+    "synonyms": []
+  },
+  {
+    "id": "HP:0002105",
+    "label": "Hemoptysis",
+    "arabic": "نفث دموي",
+    "synonyms": []
+  },
+  {
+    "id": "HP:0001635",
+    "label": "Congestive heart failure",
+    "arabic": "قصور قلب احتقاني",
+    "synonyms": []
+  },
+  {
+    "id": "HP:0001649",
+    "label": "Tachycardia",
+    "arabic": "تسرع القلب",
+    "synonyms": []
+  },
+  {
+    "id": "HP:0001657",
+    "label": "Prolonged QT interval",
+    "arabic": "إطالة فترة QT",
+    "synonyms": []
+  },
+  {
+    "id": "HP:0001698",
+    "label": "Pericardial effusion",
+    "arabic": "انصباب تاموري",
+    "synonyms": []
+  },
+  {
+    "id": "HP:0001873",
+    "label": "Thrombocytopenia",
+    "arabic": "قلة الصفيحات",
+    "synonyms": []
+  },
+  {
+    "id": "HP:0001892",
+    "label": "Abnormal bleeding",
+    "arabic": "نزف غير طبيعي",
+    "synonyms": []
+  },
+  {
+    "id": "HP:0001903",
+    "label": "Anemia",
+    "arabic": "فقر الدم",
+    "synonyms": []
+  },
+  {
+    "id": "HP:0001923",
+    "label": "Reticulocytopenia",
+    "arabic": "قلة الخلايا الشبكية",
+    "synonyms": []
+  },
+  {
+    "id": "HP:0000969",
+    "label": "Edema",
+    "arabic": "وذمة",
+    "synonyms": []
+  },
+  {
+    "id": "HP:0000988",
+    "label": "Skin rash",
+    "arabic": "طفح جلدي",
+    "synonyms": []
+  },
+  {
+    "id": "HP:0001004",
+    "label": "Lymphedema",
+    "arabic": "وذمة لمفية",
+    "synonyms": []
+  },
+  {
+    "id": "HP:0001072",
+    "label": "Thickened skin",
+    "arabic": "تثخن الجلد",
+    "synonyms": []
+  },
+  {
+    "id": "HP:0000952",
+    "label": "Jaundice",
+    "arabic": "يرقان",
+    "synonyms": []
+  },
+  {
+    "id": "HP:0000822",
+    "label": "Hypertension",
+    "arabic": "ارتفاع ضغط الدم",
+    "synonyms": []
+  },
+  {
+    "id": "HP:0000842",
+    "label": "Hyperinsulinemia",
+    "arabic": "فرط إنسولين الدم",
+    "synonyms": []
+  },
+  {
+    "id": "HP:0000819",
+    "label": "Diabetes mellitus",
+    "arabic": "داء السكري",
+    "synonyms": []
+  },
+  {
+    "id": "HP:0000855",
+    "label": "Insulin resistance",
+    "arabic": "مقاومة الإنسولين",
+    "synonyms": []
+  },
+  {
+    "id": "HP:0004322",
+    "label": "Short stature",
+    "arabic": "قصر القامة",
+    "synonyms": []
+  },
+  {
+    "id": "HP:0001510",
+    "label": "Growth delay",
+    "arabic": "تأخر النمو",
+    "synonyms": []
+  },
+  {
+    "id": "HP:0001508",
+    "label": "Failure to thrive",
+    "arabic": "فشل النمو",
+    "synonyms": []
+  },
+  {
+    "id": "HP:0004324",
+    "label": "Increased body weight",
+    "arabic": "زيادة وزن الجسم",
+    "synonyms": []
+  },
+  {
+    "id": "HP:0004325",
+    "label": "Decreased body weight",
+    "arabic": "نقص وزن الجسم",
+    "synonyms": []
+  },
+  {
+    "id": "HP:0003074",
+    "label": "Hyperglycemia",
+    "arabic": "فرط سكر الدم",
+    "synonyms": []
+  },
+  {
+    "id": "HP:0001943",
+    "label": "Hypoglycemia",
+    "arabic": "نقص سكر الدم",
+    "synonyms": []
+  },
+  {
+    "id": "HP:0003155",
+    "label": "Elevated serum transaminases",
+    "arabic": "ارتفاع ناقلات الأمين",
+    "synonyms": []
+  },
+  {
+    "id": "HP:0002910",
+    "label": "Elevated hepatic transaminase",
+    "arabic": "ارتفاع إنزيمات الكبد",
+    "synonyms": []
+  },
+  {
+    "id": "HP:0002240",
+    "label": "Hepatomegaly",
+    "arabic": "تضخم الكبد",
+    "synonyms": []
+  },
+  {
+    "id": "HP:0001744",
+    "label": "Splenomegaly",
+    "arabic": "تضخم الطحال",
+    "synonyms": []
+  },
+  {
+    "id": "HP:0001407",
+    "label": "Hepatic steatosis",
+    "arabic": "تشحم الكبد",
+    "synonyms": []
+  },
+  {
+    "id": "HP:0000790",
+    "label": "Hematuria",
+    "arabic": "بيلة دموية",
+    "synonyms": []
+  },
+  {
+    "id": "HP:0000093",
+    "label": "Proteinuria",
+    "arabic": "بيلة بروتينية",
+    "synonyms": []
+  },
+  {
+    "id": "HP:0000107",
+    "label": "Renal cyst",
+    "arabic": "كيسة كلوية",
+    "synonyms": []
+  },
+  {
+    "id": "HP:0000083",
+    "label": "Renal insufficiency",
+    "arabic": "قصور كلوي",
+    "synonyms": []
+  },
+  {
+    "id": "HP:0000124",
+    "label": "Renal tubular dysfunction",
+    "arabic": "خلل الأنابيب الكلوية",
+    "synonyms": []
+  },
+  {
+    "id": "HP:0000365",
+    "label": "Hearing impairment",
+    "arabic": "ضعف السمع",
+    "synonyms": []
+  },
+  {
+    "id": "HP:0000366",
+    "label": "Abnormality of the nose",
+    "arabic": "شذوذ الأنف",
+    "synonyms": []
+  },
+  {
+    "id": "HP:0000407",
+    "label": "Sensorineural hearing impairment",
+    "arabic": "ضعف السمع الحسي العصبي",
+    "synonyms": []
+  },
+  {
+    "id": "HP:0000505",
+    "label": "Visual impairment",
+    "arabic": "ضعف البصر",
+    "synonyms": []
+  },
+  {
+    "id": "HP:0000518",
+    "label": "Cataract",
+    "arabic": "ساد عدسة العين",
+    "synonyms": []
+  },
+  {
+    "id": "HP:0000556",
+    "label": "Retinal dystrophy",
+    "arabic": "حثل الشبكية",
+    "synonyms": []
+  },
+  {
+    "id": "HP:0000648",
+    "label": "Optic atrophy",
+    "arabic": "ضمور العصب البصري",
+    "synonyms": []
+  },
+  {
+    "id": "HP:0002650",
+    "label": "Scoliosis",
+    "arabic": "جنف",
+    "synonyms": []
+  },
+  {
+    "id": "HP:0002750",
+    "label": "Delayed skeletal maturation",
+    "arabic": "تأخر النضج الهيكلي",
+    "synonyms": []
+  },
+  {
+    "id": "HP:0002829",
+    "label": "Arthralgia",
+    "arabic": "ألم مفصلي",
+    "synonyms": []
+  },
+  {
+    "id": "HP:0001370",
+    "label": "Rheumatoid arthritis",
+    "arabic": "التهاب مفاصل روماتويدي",
+    "synonyms": []
+  },
+  {
+    "id": "HP:0001369",
+    "label": "Arthritis",
+    "arabic": "التهاب مفاصل",
+    "synonyms": []
+  },
+  {
+    "id": "HP:0003549",
+    "label": "Facial muscle weakness",
+    "arabic": "ضعف عضلات الوجه",
+    "synonyms": []
+  },
+  {
+    "id": "HP:0002381",
+    "label": "Aphasia",
+    "arabic": "حبسة كلامية",
+    "synonyms": []
+  },
+  {
+    "id": "HP:0001263",
+    "label": "Global developmental delay",
+    "arabic": "تأخر نمائي شامل",
+    "synonyms": []
+  },
+  {
+    "id": "HP:0000717",
+    "label": "Autism",
+    "arabic": "اضطراب طيف التوحد",
+    "synonyms": []
+  },
+  {
+    "id": "HP:0000729",
+    "label": "Autistic behavior",
+    "arabic": "سلوك توحدي",
+    "synonyms": []
+  },
+  {
+    "id": "HP:0000739",
+    "label": "Anxiety",
+    "arabic": "قلق",
+    "synonyms": []
+  },
+  {
+    "id": "HP:0000716",
+    "label": "Depression",
+    "arabic": "اكتئاب",
+    "synonyms": []
+  },
+  {
+    "id": "HP:0002360",
+    "label": "Sleep disturbance",
+    "arabic": "اضطراب النوم",
+    "synonyms": []
+  },
+  {
+    "id": "HP:0004395",
+    "label": "Malnutrition",
+    "arabic": "سوء تغذية",
+    "synonyms": []
+  },
+  {
+    "id": "HP:0002573",
+    "label": "Hematochezia",
+    "arabic": "تغوط دموي",
+    "synonyms": []
+  },
+  {
+    "id": "HP:0002239",
+    "label": "Gastrointestinal hemorrhage",
+    "arabic": "نزف معدي معوي",
+    "synonyms": []
+  },
+  {
+    "id": "HP:0002019",
+    "label": "Constipation",
+    "arabic": "إمساك",
+    "synonyms": []
+  },
+  {
+    "id": "HP:0002014",
+    "label": "Diarrhea",
+    "arabic": "إسهال",
+    "synonyms": []
+  },
+  {
+    "id": "HP:0002574",
+    "label": "Episodic abdominal pain",
+    "arabic": "ألم بطني نَوْبي",
+    "synonyms": []
+  },
+  {
+    "id": "HP:0005214",
+    "label": "Intestinal obstruction",
+    "arabic": "انسداد معوي",
+    "synonyms": []
+  },
+  {
+    "id": "HP:0002664",
+    "label": "Neoplasm",
+    "arabic": "ورم",
+    "synonyms": []
+  },
+  {
+    "id": "HP:0002719",
+    "label": "Recurrent infections",
+    "arabic": "عدوى متكررة",
+    "synonyms": []
+  },
+  {
+    "id": "HP:0002721",
+    "label": "Immunodeficiency",
+    "arabic": "عوز مناعي",
+    "synonyms": []
+  },
+  {
+    "id": "HP:0002960",
+    "label": "Autoimmunity",
+    "arabic": "مناعة ذاتية",
+    "synonyms": []
+  },
+  {
+    "id": "HP:0001954",
+    "label": "Recurrent fever",
+    "arabic": "حمى متكررة",
+    "synonyms": []
+  },
+  {
+    "id": "HP:0002090",
+    "label": "Pneumonia",
+    "arabic": "التهاب رئوي",
+    "synonyms": []
+  },
+  {
+    "id": "HP:0002205",
+    "label": "Recurrent respiratory infections",
+    "arabic": "عدوى تنفسية متكررة",
+    "synonyms": []
+  },
+  {
+    "id": "HP:0002783",
+    "label": "Recurrent lower respiratory tract infections",
+    "arabic": "عدوى متكررة بالسبيل التنفسي السفلي",
+    "synonyms": []
+  },
+  {
+    "id": "HP:0002089",
+    "label": "Pulmonary hypoplasia",
+    "arabic": "نقص تنسج الرئة",
+    "synonyms": []
+  },
+  {
+    "id": "HP:0002870",
+    "label": "Obstructive sleep apnea",
+    "arabic": "انقطاع النفس الانسدادي النومي",
+    "synonyms": []
+  },
+  {
+    "id": "HP:0001270",
+    "label": "Motor delay",
+    "arabic": "تأخر حركي",
+    "synonyms": []
+  },
+  {
+    "id": "HP:0001260",
+    "label": "Dysarthria",
+    "arabic": "عسر التلفظ",
+    "synonyms": []
+  },
+  {
+    "id": "HP:0001251",
+    "label": "Ataxia",
+    "arabic": "رنح",
+    "synonyms": []
+  },
+  {
+    "id": "HP:0001288",
+    "label": "Gait disturbance",
+    "arabic": "اضطراب المشي",
+    "synonyms": []
+  },
+  {
+    "id": "HP:0001276",
+    "label": "Hypertonia",
+    "arabic": "فرط التوتر العضلي",
+    "synonyms": []
+  },
+  {
+    "id": "HP:0001257",
+    "label": "Spasticity",
+    "arabic": "تشنج عضلي",
+    "synonyms": []
+  },
+  {
+    "id": "HP:0002521",
+    "label": "Hypsarrhythmia",
+    "arabic": "نظم هيبسي",
+    "synonyms": []
+  },
+  {
+    "id": "HP:0001252",
+    "label": "Muscular hypotonia",
+    "arabic": "نقص التوتر العضلي",
+    "synonyms": []
+  },
+  {
+    "id": "HP:0000975",
+    "label": "Hyperhidrosis",
+    "arabic": "فرط التعرق",
+    "synonyms": []
+  },
+  {
+    "id": "HP:0001025",
+    "label": "Urticaria",
+    "arabic": "شرى",
+    "synonyms": []
+  },
+  {
+    "id": "HP:0001065",
+    "label": "Striae distensae",
+    "arabic": "خطوط تمدد الجلد",
+    "synonyms": []
+  },
+  {
+    "id": "HP:0001595",
+    "label": "Abnormal hair morphology",
+    "arabic": "شذوذ بنية الشعر",
+    "synonyms": []
+  },
+  {
+    "id": "HP:0001597",
+    "label": "Abnormality of the nail",
+    "arabic": "شذوذ الأظافر",
+    "synonyms": []
+  },
+  {
+    "id": "HP:0002665",
+    "label": "Lymphoma",
+    "arabic": "لمفوما",
+    "synonyms": []
+  },
+  {
+    "id": "HP:0002728",
+    "label": "Chronic mucocutaneous candidiasis",
+    "arabic": "داء المبيضات المخاطي الجلدي المزمن",
+    "synonyms": []
+  },
+  {
+    "id": "HP:0001974",
+    "label": "Leukocytosis",
+    "arabic": "كثرة الكريات البيضاء",
+    "synonyms": []
+  },
+  {
+    "id": "HP:0001882",
+    "label": "Leukopenia",
+    "arabic": "قلة الكريات البيضاء",
+    "synonyms": []
+  }
+]

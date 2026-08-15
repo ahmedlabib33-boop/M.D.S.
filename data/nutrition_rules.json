@@ -1,0 +1,129 @@
+{
+  "version": "2025-2030-guideline-aligned-v1.1",
+  "notice": "Educational food-pattern guidance only. Not a therapeutic diet or supplement prescription.",
+  "baseline": {
+    "emphasize": [
+      "A varied pattern of minimally processed foods",
+      "Vegetables and fruit in varied colors",
+      "Protein foods selected for the person's preferences and medical context",
+      "Fiber-containing foods when medically appropriate"
+    ],
+    "limit": [
+      "Foods and drinks high in added sugars",
+      "Excess sodium",
+      "Frequent highly processed foods"
+    ],
+    "substitutions": [
+      "Use unsweetened drinks in place of sugar-sweetened drinks",
+      "Use herbs, spices, citrus, or vinegar to reduce reliance on salt"
+    ],
+    "hydration": [
+      "Use thirst and clinical advice to guide fluids; fluid targets differ in heart, kidney, and liver disease"
+    ],
+    "rationale": [
+      "General food-pattern education is based on the Dietary Guidelines for Americans 2025-2030."
+    ],
+    "sourceIds": [
+      "dga",
+      "usda-fdc",
+      "nih-ods"
+    ]
+  },
+  "restrictions": [
+    {
+      "id": "renal",
+      "terms": [
+        "kidney failure",
+        "renal failure",
+        "dialysis",
+        "stage 4 kidney",
+        "stage 5 kidney",
+        "advanced ckd",
+        "advanced renal disease",
+        "advanced kidney disease",
+        "chronic kidney disease stage 4",
+        "chronic kidney disease stage 5",
+        "ckd stage 4",
+        "ckd stage 5",
+        "ckd 4",
+        "ckd 5"
+      ],
+      "message": "Advanced kidney disease requires individualized electrolyte, protein, and fluid planning by the treating renal team."
+    },
+    {
+      "id": "hepatic",
+      "terms": [
+        "liver failure",
+        "decompensated cirrhosis",
+        "ascites",
+        "advanced liver disease",
+        "advanced hepatic disease",
+        "hepatic failure",
+        "decompensated liver disease"
+      ],
+      "message": "Advanced liver disease or ascites requires individualized sodium, fluid, and protein guidance from the treating team."
+    },
+    {
+      "id": "eating-disorder",
+      "terms": [
+        "eating disorder",
+        "anorexia nervosa",
+        "bulimia"
+      ],
+      "message": "Possible eating-disorder risk requires specialist assessment; automated restriction or weight-loss advice is not appropriate."
+    },
+    {
+      "id": "insulin",
+      "terms": [
+        "type 1 diabetes",
+        "insulin"
+      ],
+      "message": "Insulin-treated diabetes requires individualized carbohydrate and hypoglycemia planning with the clinical team."
+    }
+  ],
+  "conditionRules": [
+    {
+      "id": "hypertension",
+      "terms": [
+        "hypertension",
+        "high blood pressure"
+      ],
+      "emphasize": [
+        "Vegetables, fruit, legumes, and minimally processed foods when compatible with renal status"
+      ],
+      "limit": [
+        "High-sodium packaged foods"
+      ],
+      "rationale": "A lower-sodium dietary pattern may support blood-pressure management; medication and kidney status matter."
+    },
+    {
+      "id": "diabetes",
+      "terms": [
+        "type 2 diabetes",
+        "diabetes mellitus"
+      ],
+      "emphasize": [
+        "High-fiber carbohydrate sources and balanced meals"
+      ],
+      "limit": [
+        "Sugar-sweetened drinks and large amounts of refined carbohydrate"
+      ],
+      "rationale": "Consistent, higher-quality carbohydrate choices can support glucose management; this does not replace an individualized diabetes plan."
+    },
+    {
+      "id": "reflux",
+      "terms": [
+        "reflux",
+        "gerd",
+        "gastroesophageal reflux"
+      ],
+      "emphasize": [
+        "Smaller meals if large meals worsen symptoms"
+      ],
+      "limit": [
+        "Individually identified trigger foods and late meals when these provoke symptoms"
+      ],
+      "rationale": "Reflux triggers vary; unnecessary blanket food exclusions are not advised."
+    }
+  ]
+}

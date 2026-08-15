@@ -1,0 +1,47 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://medical-decision-support.vercel.app/schemas/ios-measurements-1.1.json",
+  "title": "Ahmed Labib Medical Measurements iOS Export",
+  "type": "object",
+  "required": ["measurements"],
+  "properties": {
+    "schemaVersion": {"type": "string", "enum": ["1.0", "1.1"]},
+    "exportType": {"type": "string", "const": "com.ahmedlabib.medical-measurements"},
+    "patientId": {"type": "string", "maxLength": 120},
+    "timestamp": {"type": "string"},
+    "device": {"type": "string", "maxLength": 160},
+    "arkitVersion": {"type": "string", "maxLength": 40},
+    "measurements": {
+      "type": "array",
+      "maxItems": 100,
+      "items": {
+        "type": "object",
+        "required": ["name", "value", "unit"],
+        "properties": {
+          "name": {"enum": ["neck_circumference_cm","facial_width_cm","facial_asymmetry_mm","height_cm","head_circumference_cm","pinna_height_mm","pinna_width_mm","interpupillary_distance_mm","intercanthal_distance_mm","tragus_to_nasion_mm","tragus_to_lateral_canthus_mm","ear_projection_mm","ear_projection_angle_degree"]},
+          "value": {"type": "number", "exclusiveMinimum": 0},
+          "unit": {"enum": ["cm", "mm", "degree"]},
+          "confidence": {"enum": ["high", "medium", "low", "unknown"]},
+          "method": {"type": "string", "maxLength": 300},
+          "timestamp": {"type": "string"}
+        },
+        "additionalProperties": true
+      }
+    },
+    "meshAttachments": {
+      "type": "array",
+      "maxItems": 10,
+      "items": {
+        "type": "object",
+        "required": ["fileName", "format", "sizeBytes"],
+        "properties": {
+          "fileName": {"type": "string", "maxLength": 255},
+          "format": {"enum": ["usdz", "ply"]},
+          "sizeBytes": {"type": "integer", "minimum": 1}
+        }
+      }
+    },
+    "accuracyDisclaimer": {"type": "string"}
+  },
+  "additionalProperties": true
+}

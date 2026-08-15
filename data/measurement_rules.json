@@ -1,0 +1,21 @@
+{
+  "schemaVersion": "1.1",
+  "iosContract": "com.ahmedlabib.medical-measurements",
+  "supported": {
+    "neck_circumference_cm": {"unit":"cm","label":"Neck circumference","context":"OSA screening and trend documentation","reviewAbove":43},
+    "facial_width_cm": {"unit":"cm","label":"Facial width","context":"Reconstructive baseline and longitudinal comparison"},
+    "facial_asymmetry_mm": {"unit":"mm","label":"Facial asymmetry","context":"Trend documentation; head position and expression can affect measurement","reviewAbove":5},
+    "height_cm": {"unit":"cm","label":"Height","context":"Anthropometric context and trend tracking"},
+    "head_circumference_cm": {"unit":"cm","label":"Head circumference","context":"Age-specific pediatric or craniofacial assessment"},
+    "pinna_height_mm": {"unit":"mm","label":"Pinna height","context":"External-ear documentation and surgical planning reference"},
+    "pinna_width_mm": {"unit":"mm","label":"Pinna width","context":"External-ear documentation and surgical planning reference"},
+    "interpupillary_distance_mm": {"unit":"mm","label":"Interpupillary distance","context":"Craniofacial and ophthalmic reference measurement"},
+    "intercanthal_distance_mm": {"unit":"mm","label":"Intercanthal distance","context":"Craniofacial and ophthalmic reference measurement"},
+    "tragus_to_nasion_mm": {"unit":"mm","label":"Tragus-to-nasion distance","context":"Craniofacial and reconstructive reference measurement"},
+    "tragus_to_lateral_canthus_mm": {"unit":"mm","label":"Tragus-to-lateral-canthus distance","context":"Craniofacial and reconstructive reference measurement"},
+    "ear_projection_mm": {"unit":"mm","label":"Ear projection","context":"External-ear position relative to the skull"},
+    "ear_projection_angle_degree": {"unit":"degree","label":"Ear projection angle","context":"External-ear position and symmetry documentation"}
+  },
+  "attachments": ["usdz", "ply"],
+  "accuracyNotice": "iPhone LiDAR and TrueDepth measurements are approximate and require validation against appropriate clinical instruments before clinical decisions."
+}

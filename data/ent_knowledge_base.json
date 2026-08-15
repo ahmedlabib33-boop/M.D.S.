@@ -1,0 +1,848 @@
+{
+  "meta": {
+    "name": "ENT (Otolaryngology) Knowledge Base",
+    "version": "1.0",
+    "purpose": "Structured reference data for a decision-support / educational chatbot. NOT a diagnostic device.",
+    "disclaimer": "This knowledge base is a curated clinical reference summary, not a substitute for professional medical judgement, examination, imaging, or laboratory testing. It is intended to assist recall and organize differentials for clinicians, students, and informed patients -- it must never be the sole basis for a diagnosis or treatment decision. Always correlate with clinical examination and local guidelines.",
+    "last_reviewed_note": "Content compiled from general standard otolaryngology teaching (e.g. Cummings Otolaryngology, Scott-Brown's, UpToDate-style summaries) at a general educational level. It has NOT been independently re-verified against current primary literature and may not reflect the newest guidelines -- verify against current sources before clinical use.",
+    "developed_by": "Eng. Ahmed Labib",
+    "knowledge_sources": [
+      "Cummings Otolaryngology: Head & Neck Surgery \u2014 Definitive ENT reference text",
+      "Scott-Brown's Otorhinolaryngology, Head and Neck Surgery \u2014 Comprehensive British reference",
+      "UpToDate-style Clinical Summaries \u2014 Evidence-based review format",
+      "Branchial Arch Embryology (Standard Medical Teaching) \u2014 Congenital anomaly development",
+      "AAO-HNS Clinical Practice Guidelines \u2014 Referral and management protocols",
+      "NICE Clinical Knowledge Summaries (UK) \u2014 Primary care ENT guidance"
+    ],
+    "compilation_note": "Content compiled from general standard otolaryngology teaching at a general educational level. NOT independently re-verified against current primary literature."
+  },
+  "conditions": [
+    {
+      "id": "congenital_preauricular_sinus",
+      "name": "Congenital Preauricular Sinus (Preauricular Pit/Fistula)",
+      "category": "Ear - Congenital",
+      "definition": "A congenital epithelial-lined tract, usually located anterior to the crus of the helix, resulting from incomplete fusion of the first and second branchial (pharyngeal) arch hillocks (of His) during external ear development.",
+      "epidemiology": "Prevalence varies widely by population, roughly 0.1-0.9% in most Western populations but up to 4-10% in some African and Asian populations. Can be unilateral or bilateral (bilateral cases have a higher association with other anomalies).",
+      "etiology": "Failure of fusion of the hillocks of His during weeks 6-8 of embryogenesis, leaving a blind-ending epithelial tract that may branch and can extend close to the facial nerve and temporalis fascia.",
+      "associations": [
+        "Usually an isolated finding",
+        "Can be part of Branchio-Oto-Renal (BOR) syndrome, especially if bilateral or with hearing loss/renal anomalies",
+        "Beckwith-Wiedemann syndrome",
+        "Other branchial arch anomaly syndromes"
+      ],
+      "symptoms": [
+        "asymptomatic pit in front of the ear",
+        "small opening anterior to helix",
+        "occasional clear or mucoid discharge from the pit",
+        "intermittent malodor from the pit",
+        "usually no pain if uninfected"
+      ],
+      "signs": [
+        "small dimple or pit anterior to the crus of the helix",
+        "may express mucoid material on gentle pressure",
+        "surrounding skin normal if uninfected",
+        "tract may be palpable as a cord-like structure"
+      ],
+      "differential_diagnosis": [
+        "First branchial cleft anomaly (different location/tract course)",
+        "Preauricular skin tag/accessory tragus (solid, not a tract)",
+        "Sebaceous cyst"
+      ],
+      "investigations": [
+        "Usually a clinical diagnosis, no imaging needed if uncomplicated",
+        "Renal ultrasound if bilateral pits, other syndromic features, or family history suggestive of BOR syndrome",
+        "Audiology screening if syndromic features or hearing concerns",
+        "MRI/fistulogram only if complex recurrent disease before revision surgery, to map tract extent"
+      ],
+      "management": {
+        "asymptomatic": "No treatment required; reassurance and observation. Advise the family/patient to avoid manipulating or squeezing the pit.",
+        "infected_or_recurrent": "Treat acute infection first (see Preauricular Sinus Cellulitis/Abscess entry), then consider elective complete surgical excision of the sinus tract once infection has resolved, since recurrence is common without full tract excision.",
+        "surgical_note": "Surgical excision should remove the entire tract (which may branch) down to and including a cuff of perichondrium/cartilage if involved, to reduce recurrence; care must be taken near the temporal branch of the facial nerve."
+      },
+      "complications": [
+        "Recurrent infection/abscess formation",
+        "Cellulitis of surrounding skin/perichondritis",
+        "Perichondritis or auricular cartilage involvement if untreated infection spreads",
+        "Recurrence after incomplete surgical excision"
+      ],
+      "red_flags": [
+        "Spreading facial cellulitis",
+        "Fever with facial swelling",
+        "Signs of perichondritis (severe pain, erythema of the pinna cartilage)"
+      ],
+      "when_to_refer": "Refer to ENT for any recurrent or infected preauricular sinus, for elective excision after infection control, or if syndromic features (bilateral pits, hearing loss, renal anomalies, family history) are present."
+    },
+    {
+      "id": "preauricular_sinus_cellulitis",
+      "name": "Preauricular Sinus Cellulitis / Abscess (Infected Congenital Preauricular Sinus)",
+      "category": "Ear - Infection (complication of congenital preauricular sinus)",
+      "definition": "Acute bacterial infection of a congenital preauricular sinus tract and/or the surrounding soft tissue, ranging from superficial cellulitis to a discrete abscess.",
+      "etiology": "Obstruction or trauma to the sinus tract allows bacterial entry; most commonly Staphylococcus aureus (including MRSA in some regions) and Streptococcus species; Proteus and anaerobes are also reported, particularly in recurrent/chronic cases.",
+      "risk_factors": [
+        "Pre-existing congenital preauricular sinus",
+        "Prior manipulation, squeezing, or piercing of the pit",
+        "Prior episodes of infection (recurrence is common)",
+        "Poor hygiene of the tract opening"
+      ],
+      "symptoms": [
+        "pain and tenderness anterior to the ear",
+        "redness and swelling around the preauricular pit",
+        "purulent or foul-smelling discharge from the pit",
+        "warmth over the affected area",
+        "fever (more common if abscess or spreading cellulitis)",
+        "fluctuant swelling if abscess has formed"
+      ],
+      "signs": [
+        "localized erythema and induration around the sinus opening",
+        "tenderness on palpation",
+        "purulent discharge expressible from the pit",
+        "fluctuant, tender mass if abscess present",
+        "possible regional lymphadenopathy (preauricular/parotid nodes)",
+        "look for extension toward the pinna cartilage (risk of perichondritis)"
+      ],
+      "differential_diagnosis": [
+        "Parotitis / parotid abscess",
+        "Infected sebaceous cyst",
+        "Perichondritis of the pinna (from other causes, e.g. piercing)",
+        "First branchial cleft cyst infection",
+        "Furunculosis of the periauricular skin"
+      ],
+      "investigations": [
+        "Primarily clinical diagnosis",
+        "Wound/pus swab for culture and sensitivity, especially in recurrent or non-resolving cases or if MRSA is a concern",
+        "Ultrasound of the soft tissue if abscess extent is unclear or to guide drainage",
+        "CT with contrast reserved for extensive, deep, or recurrent disease with suspected deeper extension"
+      ],
+      "management": {
+        "mild_cellulitis_no_abscess": "Oral antibiotics covering Staphylococcus and Streptococcus (e.g. a first-generation cephalosporin or anti-staphylococcal penicillin per local guidelines and allergy status), warm compresses, and close follow-up. Consider MRSA coverage if local prevalence is high or risk factors present.",
+        "abscess_formation": "Incision and drainage (or needle aspiration for smaller collections) plus antibiotics; pus should be sent for culture to guide/de-escalate therapy.",
+        "recurrent_or_after_infection_resolves": "Elective complete surgical excision of the sinus tract is recommended once acute infection is fully settled, as incising through active infection increases recurrence and scarring risk. Excision should ideally be delayed several weeks after infection resolves.",
+        "important_principle": "Avoid definitive tract excision during active infection/abscess when possible -- drain/treat the acute infection first, then plan elective excision."
+      },
+      "complications": [
+        "Recurrent abscess formation",
+        "Perichondritis or chondritis of the auricular cartilage (serious, can cause cartilage destruction/cauliflower ear if untreated)",
+        "Spreading facial cellulitis",
+        "Scarring, and fistula recurrence if excision is incomplete",
+        "Rarely, spread to deeper structures (parotid space)"
+      ],
+      "red_flags": [
+        "Rapidly spreading erythema beyond the preauricular area",
+        "High fever or systemic toxicity",
+        "Severe pain out of proportion to exam findings",
+        "Signs of cartilage involvement (perichondritis) -- disproportionate pain, cartilage swelling",
+        "Immunocompromised patient or poorly controlled diabetes"
+      ],
+      "when_to_refer": "Refer urgently to ENT (or emergency care) if abscess formation, systemic symptoms/fever, suspected cartilage involvement, or if not responding to a course of appropriate oral antibiotics within 48-72 hours. Refer electively for tract excision once infection has resolved."
+    },
+    {
+      "id": "acute_otitis_media",
+      "name": "Acute Otitis Media (AOM)",
+      "category": "Ear - Infection",
+      "definition": "Acute inflammation and infection of the middle ear, typically following eustachian tube dysfunction after an upper respiratory tract infection.",
+      "etiology": "Common pathogens: Streptococcus pneumoniae, non-typeable Haemophilus influenzae, Moraxella catarrhalis; viral URIs are frequently the preceding trigger.",
+      "risk_factors": [
+        "young age (peak 6-24 months)",
+        "daycare attendance",
+        "bottle feeding while supine",
+        "secondhand smoke exposure",
+        "craniofacial abnormalities e.g. cleft palate",
+        "seasonal (winter/autumn)"
+      ],
+      "symptoms": [
+        "ear pain (otalgia)",
+        "irritability/ear-tugging in infants",
+        "fever",
+        "reduced hearing/aural fullness",
+        "otorrhea if tympanic membrane perforates"
+      ],
+      "signs": [
+        "bulging, erythematous tympanic membrane",
+        "reduced or absent light reflex",
+        "reduced tympanic membrane mobility on pneumatic otoscopy",
+        "purulent discharge if TM perforated"
+      ],
+      "differential_diagnosis": [
+        "Otitis media with effusion (no acute signs of infection)",
+        "Otitis externa",
+        "Referred pain from teething/TMJ/pharyngitis",
+        "Mastoiditis (complication, not a differential per se)"
+      ],
+      "investigations": [
+        "Primarily clinical/otoscopic diagnosis",
+        "Tympanometry if diagnosis unclear",
+        "Culture of discharge only if persistent/recurrent or treatment failure"
+      ],
+      "management": {
+        "mild_or_watchful_waiting_candidates": "Analgesia (paracetamol/ibuprofen); many guidelines support observation for 48-72 hours in well-appearing children over 2 years without severe symptoms.",
+        "antibiotics_indicated": "First-line typically high-dose amoxicillin (or amoxicillin-clavulanate if recent antibiotic use, recurrent AOM, or concurrent conjunctivitis), per local guidelines and allergy status.",
+        "recurrent_disease": "Consider ENT referral for tympanostomy tube evaluation if 3+ episodes in 6 months or 4+ in 12 months."
+      },
+      "complications": [
+        "Tympanic membrane perforation",
+        "Mastoiditis",
+        "Chronic otitis media with effusion",
+        "Cholesteatoma (long-term, from chronic disease)",
+        "Rarely intracranial complications (meningitis, abscess)"
+      ],
+      "red_flags": [
+        "High fever with severe systemic illness",
+        "Postauricular swelling/protrusion of the ear (suggests mastoiditis)",
+        "Facial nerve palsy",
+        "Signs of meningism"
+      ],
+      "when_to_refer": "Refer for recurrent AOM, treatment failure, suspected mastoiditis, or any intracranial complication signs."
+    },
+    {
+      "id": "otitis_externa",
+      "name": "Otitis Externa (Swimmer's Ear)",
+      "category": "Ear - Infection",
+      "definition": "Inflammation/infection of the external auditory canal skin, often due to bacterial or fungal infection, frequently precipitated by moisture or trauma.",
+      "etiology": "Most commonly Pseudomonas aeruginosa and Staphylococcus aureus; fungal (otomycosis, e.g. Aspergillus, Candida) in a subset, especially after antibiotic ear drop use or in humid climates.",
+      "risk_factors": [
+        "swimming/water exposure",
+        "use of cotton buds/hearing aids/earplugs causing trauma",
+        "eczema/psoriasis of the ear canal",
+        "diabetes (risk factor for malignant/necrotizing otitis externa)"
+      ],
+      "symptoms": [
+        "ear pain, often severe, worse with movement of the tragus/pinna",
+        "itching",
+        "discharge",
+        "aural fullness/hearing reduction if canal is swollen shut"
+      ],
+      "signs": [
+        "tenderness on tragal pressure or pinna traction (classic finding)",
+        "erythematous, edematous ear canal",
+        "debris/discharge in canal",
+        "canal may be too swollen to visualize tympanic membrane"
+      ],
+      "differential_diagnosis": [
+        "Acute otitis media with perforation",
+        "Malignant (necrotizing) otitis externa in diabetics/immunocompromised",
+        "Furunculosis of the canal",
+        "Contact dermatitis"
+      ],
+      "investigations": [
+        "Clinical diagnosis via otoscopy",
+        "Swab for culture in refractory, recurrent, or immunocompromised cases",
+        "CT/MRI and specialist referral if malignant otitis externa suspected"
+      ],
+      "management": {
+        "first_line": "Topical antibiotic +/- steroid ear drops (e.g. a quinolone-based otic drop); keep the ear dry; aural toilet (gentle cleaning) if debris present.",
+        "severe_canal_swelling": "An ear wick may be inserted to allow drops to penetrate a swollen canal.",
+        "fungal": "Topical antifungal drops if otomycosis confirmed/suspected.",
+        "malignant_otitis_externa": "Requires urgent ENT referral, IV antibiotics (typically anti-pseudomonal), and imaging -- this is a serious, potentially life-threatening skull-base osteomyelitis, mainly in diabetics/immunocompromised."
+      },
+      "complications": [
+        "Canal stenosis from chronic inflammation",
+        "Spread to auricular cartilage (perichondritis)",
+        "Malignant otitis externa (skull base osteomyelitis) -- rare but serious"
+      ],
+      "red_flags": [
+        "Diabetic or immunocompromised patient with severe/refractory otitis externa (risk of malignant otitis externa)",
+        "Cranial nerve palsies",
+        "Severe unrelenting pain, especially at night"
+      ],
+      "when_to_refer": "Refer if not improving after a full course of topical treatment, if malignant otitis externa is suspected, or if recurrent."
+    },
+    {
+      "id": "cholesteatoma",
+      "name": "Cholesteatoma",
+      "category": "Ear - Chronic Disease",
+      "definition": "An abnormal, locally destructive growth of keratinizing squamous epithelium within the middle ear or mastoid, which can erode surrounding bone.",
+      "etiology": "Can be congenital (behind an intact TM, no history of infection/perforation) or acquired (often from chronic negative middle ear pressure/retraction pocket, or implantation after trauma/surgery).",
+      "symptoms": [
+        "chronic, often foul-smelling otorrhea unresponsive to standard drops",
+        "progressive conductive hearing loss",
+        "occasionally dizziness or facial weakness if advanced"
+      ],
+      "signs": [
+        "retraction pocket or perforation with visible keratin debris/white mass on otoscopy",
+        "granulation tissue",
+        "conductive hearing loss on tuning fork tests (Rinne negative, Weber lateralizes to affected ear)"
+      ],
+      "differential_diagnosis": [
+        "Chronic suppurative otitis media without cholesteatoma",
+        "Otitis externa",
+        "Middle ear tumor (rare)"
+      ],
+      "investigations": [
+        "Otoscopy/microscopy",
+        "Audiometry",
+        "CT temporal bone to assess extent of bony erosion before surgery"
+      ],
+      "management": {
+        "definitive": "Surgical removal (mastoidectomy +/- tympanoplasty) is the mainstay -- cholesteatoma will not resolve with medical therapy alone and continues to erode bone if untreated.",
+        "medical_adjunct": "Topical/oral antibiotics can control associated infection but do not treat the underlying disease."
+      },
+      "complications": [
+        "Conductive or mixed hearing loss",
+        "Facial nerve palsy",
+        "Labyrinthine fistula/vertigo",
+        "Intracranial spread: meningitis, brain abscess (rare but serious)"
+      ],
+      "red_flags": [
+        "Vertigo",
+        "Facial weakness",
+        "Signs of intracranial infection (severe headache, neck stiffness, altered consciousness)"
+      ],
+      "when_to_refer": "All suspected cholesteatoma should be referred to ENT for assessment and likely surgery."
+    },
+    {
+      "id": "mastoiditis",
+      "name": "Acute Mastoiditis",
+      "category": "Ear - Infection (complication)",
+      "definition": "Infection extending from the middle ear into the mastoid air cells, usually a complication of inadequately treated or severe acute otitis media.",
+      "etiology": "Same organisms as AOM (S. pneumoniae, H. influenzae, S. pyogenes, S. aureus).",
+      "symptoms": [
+        "persistent ear pain and fever despite AOM treatment",
+        "postauricular swelling/redness",
+        "protruding/displaced ear"
+      ],
+      "signs": [
+        "postauricular erythema, tenderness, and swelling",
+        "auricle pushed forward and down/outward",
+        "bulging TM on otoscopy",
+        "possible sagging of the posterior-superior ear canal wall"
+      ],
+      "differential_diagnosis": [
+        "Postauricular lymphadenitis",
+        "Preauricular sinus infection (different location, more anterior)",
+        "Otitis externa with periauricular spread"
+      ],
+      "investigations": [
+        "Clinical diagnosis supported by otoscopy",
+        "CT temporal bone with contrast if complication or subperiosteal abscess suspected",
+        "Blood cultures if systemically unwell"
+      ],
+      "management": {
+        "core": "IV antibiotics covering typical AOM pathogens, ENT involvement early; myringotomy +/- tympanostomy tube for drainage and culture.",
+        "abscess_or_complications": "Mastoidectomy if subperiosteal abscess, treatment failure, or intracranial complication."
+      },
+      "complications": [
+        "Subperiosteal abscess",
+        "Facial nerve palsy",
+        "Labyrinthitis",
+        "Intracranial spread: meningitis, sigmoid sinus thrombosis, brain abscess"
+      ],
+      "red_flags": [
+        "Any sign of intracranial complication",
+        "Rapid deterioration despite treatment"
+      ],
+      "when_to_refer": "Urgent ENT / emergency referral -- this is a potentially serious infection requiring prompt treatment."
+    },
+    {
+      "id": "acute_rhinosinusitis",
+      "name": "Acute Rhinosinusitis",
+      "category": "Nose/Sinus - Infection",
+      "definition": "Inflammation of the nasal and paranasal sinus mucosa lasting under 4 weeks, most often viral, occasionally with secondary bacterial infection.",
+      "etiology": "Predominantly viral (rhinovirus, influenza, etc.); bacterial superinfection (S. pneumoniae, H. influenzae, M. catarrhalis) in a minority, typically after symptoms worsen after initial improvement ('double-worsening').",
+      "symptoms": [
+        "nasal congestion",
+        "purulent nasal discharge",
+        "facial pain/pressure, worse leaning forward",
+        "reduced sense of smell",
+        "fever (more suggestive of bacterial cause)"
+      ],
+      "signs": [
+        "tenderness over affected sinuses",
+        "purulent discharge on nasal exam",
+        "edematous nasal mucosa"
+      ],
+      "differential_diagnosis": [
+        "Allergic rhinitis",
+        "Common cold/viral URI (self-limited, <10 days)",
+        "Dental abscess referred pain",
+        "Migraine"
+      ],
+      "investigations": [
+        "Clinical diagnosis in most cases",
+        "Nasal endoscopy or CT sinuses reserved for chronic, recurrent, or complicated cases"
+      ],
+      "management": {
+        "viral_most_cases": "Supportive: saline irrigation, analgesia, intranasal corticosteroids for symptom relief; antibiotics not indicated.",
+        "suspected_bacterial": "Consider antibiotics if symptoms persist beyond 10 days without improvement, or severe symptoms (fever >39C, facial pain, purulent discharge) for 3-4 consecutive days, or 'double-worsening' pattern -- per local guidelines."
+      },
+      "complications": [
+        "Orbital cellulitis/abscess",
+        "Intracranial spread (rare)",
+        "Chronic rhinosinusitis"
+      ],
+      "red_flags": [
+        "Periorbital swelling/redness",
+        "Visual changes",
+        "Severe headache, altered mental status",
+        "High fever with toxicity"
+      ],
+      "when_to_refer": "Refer urgently if orbital or intracranial complication suspected; refer to ENT for recurrent/chronic disease."
+    },
+    {
+      "id": "allergic_rhinitis",
+      "name": "Allergic Rhinitis",
+      "category": "Nose - Allergic/Inflammatory",
+      "definition": "IgE-mediated inflammation of the nasal mucosa triggered by inhaled allergens, either seasonal (e.g. pollen) or perennial (e.g. dust mite, pet dander).",
+      "symptoms": [
+        "sneezing",
+        "clear rhinorrhea",
+        "nasal itching",
+        "nasal congestion",
+        "itchy/watery eyes (if allergic conjunctivitis co-exists)"
+      ],
+      "signs": [
+        "pale/boggy nasal turbinates",
+        "allergic shiners (infraorbital darkening)",
+        "nasal crease from repeated rubbing ('allergic salute')"
+      ],
+      "differential_diagnosis": [
+        "Non-allergic (vasomotor) rhinitis",
+        "Acute viral rhinosinusitis",
+        "Rhinitis medicamentosa (from overuse of decongestant sprays)"
+      ],
+      "investigations": [
+        "Clinical diagnosis usually sufficient",
+        "Skin prick testing or specific IgE testing if allergen identification needed for immunotherapy planning"
+      ],
+      "management": {
+        "first_line": "Intranasal corticosteroid sprays +/- oral or intranasal antihistamines; allergen avoidance where feasible.",
+        "refractory": "Consider allergen immunotherapy for confirmed allergen-specific disease not controlled by medical therapy."
+      },
+      "complications": [
+        "Chronic rhinosinusitis",
+        "Nasal polyps (associated)",
+        "Sleep disturbance",
+        "Impact on asthma control"
+      ],
+      "red_flags": [],
+      "when_to_refer": "Refer to allergy/ENT if refractory to standard therapy or for immunotherapy consideration."
+    },
+    {
+      "id": "nasal_polyps",
+      "name": "Nasal Polyps (Chronic Rhinosinusitis with Nasal Polyps)",
+      "category": "Nose/Sinus - Chronic Inflammatory",
+      "definition": "Benign, edematous, inflammatory growths of the sinonasal mucosa, often bilateral, associated with chronic rhinosinusitis.",
+      "associations": [
+        "Asthma",
+        "Aspirin-exacerbated respiratory disease (Samter's triad: asthma, polyps, aspirin sensitivity)",
+        "Cystic fibrosis (especially unilateral polyps in children)"
+      ],
+      "symptoms": [
+        "persistent nasal congestion",
+        "reduced/absent sense of smell (anosmia)",
+        "postnasal drip",
+        "facial pressure"
+      ],
+      "signs": [
+        "pale, grey, grape-like masses visualized on anterior rhinoscopy or nasal endoscopy",
+        "bilateral in typical inflammatory polyps"
+      ],
+      "differential_diagnosis": [
+        "Inverted papilloma (unilateral, needs biopsy to exclude)",
+        "Antrochoanal polyp (unilateral, arises from maxillary sinus)",
+        "Sinonasal malignancy (unilateral mass, red flag)"
+      ],
+      "investigations": [
+        "Nasal endoscopy",
+        "CT sinuses to define extent before surgery",
+        "Biopsy if unilateral or atypical features (to exclude malignancy)"
+      ],
+      "management": {
+        "medical": "Intranasal (and sometimes short-course oral) corticosteroids as first-line.",
+        "surgical": "Functional endoscopic sinus surgery (FESS) for those failing medical therapy or with significant obstruction."
+      },
+      "complications": [
+        "Anosmia",
+        "Recurrent sinus infections",
+        "Recurrence after surgery, especially without ongoing medical therapy"
+      ],
+      "red_flags": [
+        "Unilateral polyp/mass -- must exclude malignancy or inverted papilloma",
+        "Bleeding polyp",
+        "Associated visual or neurological symptoms"
+      ],
+      "when_to_refer": "Refer to ENT for endoscopic assessment; any unilateral nasal mass warrants urgent referral to exclude malignancy."
+    },
+    {
+      "id": "epistaxis",
+      "name": "Epistaxis (Nosebleed)",
+      "category": "Nose - Bleeding",
+      "definition": "Bleeding from the nasal cavity, most commonly from Little's area (Kiesselbach's plexus) anteriorly in the nasal septum.",
+      "etiology": [
+        "Local trauma/nose-picking (most common in children)",
+        "Dry air/mucosal irritation",
+        "Anticoagulant/antiplatelet medication",
+        "Hypertension",
+        "Bleeding disorders",
+        "Nasal/sinus tumors (rare, consider if unilateral, recurrent, and in an older patient or associated with other red flags)"
+      ],
+      "symptoms": [
+        "bleeding from one or both nostrils",
+        "posterior bleeds may present with bleeding into the throat/hematemesis"
+      ],
+      "signs": [
+        "visible bleeding point on anterior rhinoscopy (usually Little's area) for anterior bleeds",
+        "posterior bleeds harder to visualize, often heavier and bilateral"
+      ],
+      "differential_diagnosis": [
+        "Anterior vs posterior bleed (management differs)",
+        "Bleeding disorder",
+        "Nasal/sinonasal neoplasm if recurrent unilateral bleeding in an at-risk patient"
+      ],
+      "investigations": [
+        "Usually clinical",
+        "Coagulation studies/FBC if recurrent, severe, or on anticoagulants",
+        "Nasal endoscopy/imaging if recurrent unilateral bleeding to exclude a mass"
+      ],
+      "management": {
+        "first_aid": "Sit upright, lean slightly forward, firm continuous pressure on the soft lower nose for 10-15 minutes, ice pack.",
+        "if_bleeding_point_visible": "Topical vasoconstrictor + chemical cautery (e.g. silver nitrate) or electrocautery.",
+        "if_not_controlled": "Anterior (+/- posterior) nasal packing; posterior bleeds or refractory cases may need ENT and possible arterial ligation/embolization.",
+        "review_medications": "Review anticoagulant/antiplatelet therapy in consultation with the prescribing team; do not stop anticoagulation unilaterally without discussion."
+      },
+      "complications": [
+        "Airway compromise (rare, severe posterior bleeds)",
+        "Aspiration",
+        "Hypovolemia if severe/recurrent"
+      ],
+      "red_flags": [
+        "Hemodynamic instability",
+        "Bleeding not controlled with standard first aid after 20 minutes",
+        "Recurrent unilateral bleeding in an older patient (consider malignancy)",
+        "Bleeding diathesis or on anticoagulation with major bleed"
+      ],
+      "when_to_refer": "Refer/emergency care for uncontrolled bleeding, hemodynamic instability, or suspicion of an underlying mass/bleeding disorder."
+    },
+    {
+      "id": "acute_tonsillitis_ptabscess",
+      "name": "Acute Tonsillitis / Peritonsillar Abscess (Quinsy)",
+      "category": "Throat - Infection",
+      "definition": "Acute tonsillitis is inflammation/infection of the palatine tonsils, viral or bacterial; peritonsillar abscess (quinsy) is a collection of pus between the tonsil capsule and the pharyngeal muscles, a complication of tonsillitis.",
+      "etiology": "Tonsillitis: viral (most common, e.g. adenovirus, EBV) or bacterial (Group A Streptococcus most notable). Quinsy: usually polymicrobial, including Group A Strep and anaerobes.",
+      "symptoms": [
+        "sore throat",
+        "odynophagia (painful swallowing)",
+        "fever",
+        "for quinsy: severe unilateral throat pain, trismus (difficulty opening mouth), muffled 'hot potato' voice, drooling"
+      ],
+      "signs": [
+        "tonsillar erythema/exudate",
+        "tender cervical lymphadenopathy",
+        "for quinsy: unilateral peritonsillar bulging, uvula deviated to the opposite side, trismus"
+      ],
+      "differential_diagnosis": [
+        "Infectious mononucleosis (EBV)",
+        "Diphtheria (rare, in unvaccinated populations)",
+        "Epiglottitis (airway emergency, different exam findings)",
+        "Retropharyngeal abscess"
+      ],
+      "investigations": [
+        "Centor/McIsaac criteria to estimate probability of Group A Strep and guide antibiotic decisions",
+        "Throat/rapid strep swab where available",
+        "For quinsy: clinical diagnosis; needle aspiration is both diagnostic and therapeutic; CT with contrast if diagnosis unclear or deep neck extension suspected"
+      ],
+      "management": {
+        "viral_tonsillitis": "Supportive care: analgesia, hydration, rest.",
+        "bacterial_tonsillitis": "Penicillin-based antibiotics (per local guidelines/allergy status) if bacterial cause likely per clinical scoring.",
+        "peritonsillar_abscess": "Needle aspiration or incision and drainage, plus IV/oral antibiotics; ENT involvement recommended.",
+        "recurrent_tonsillitis": "Consider ENT referral for tonsillectomy evaluation if recurrent episodes meeting criteria (e.g. 'Paradise criteria' region-dependent)."
+      },
+      "complications": [
+        "Peritonsillar abscess",
+        "Airway obstruction (rare but serious)",
+        "Rheumatic fever / post-streptococcal glomerulonephritis (untreated Strep)",
+        "Parapharyngeal or retropharyngeal spread"
+      ],
+      "red_flags": [
+        "Stridor or airway compromise",
+        "Trismus with drooling (suggests quinsy)",
+        "Neck stiffness/torticollis (deep neck space infection)",
+        "Inability to swallow secretions"
+      ],
+      "when_to_refer": "Urgent ENT/emergency referral for suspected quinsy, airway compromise, or deep neck space infection signs."
+    },
+    {
+      "id": "laryngitis",
+      "name": "Acute Laryngitis",
+      "category": "Throat/Voice - Infection/Inflammation",
+      "definition": "Inflammation of the larynx, most commonly due to a viral upper respiratory infection, causing hoarseness/voice change.",
+      "etiology": [
+        "Viral URI (most common)",
+        "Vocal strain/overuse",
+        "Laryngopharyngeal reflux (chronic laryngitis)",
+        "Smoking/irritant exposure"
+      ],
+      "symptoms": [
+        "hoarseness/dysphonia",
+        "throat discomfort",
+        "dry cough",
+        "may have preceding URI symptoms"
+      ],
+      "signs": [
+        "erythematous, edematous vocal folds on laryngoscopy (if performed)",
+        "normal airway in typical viral cases"
+      ],
+      "differential_diagnosis": [
+        "Vocal fold nodules/polyps (chronic hoarseness)",
+        "Laryngopharyngeal reflux",
+        "Laryngeal malignancy (persistent hoarseness >2-3 weeks in a smoker/older adult -- red flag)",
+        "Vocal fold paralysis"
+      ],
+      "investigations": [
+        "Usually clinical for acute short-duration hoarseness",
+        "Laryngoscopy if hoarseness persists beyond 2-3 weeks, or red flags present"
+      ],
+      "management": {
+        "acute_viral": "Voice rest, hydration, humidification; avoid whispering (paradoxically strains the voice); resolves within 1-2 weeks typically.",
+        "reflux_related": "Lifestyle modification, consider acid suppression if laryngopharyngeal reflux suspected."
+      },
+      "complications": [
+        "Chronic hoarseness if underlying cause not addressed",
+        "Vocal fold nodules with continued vocal abuse"
+      ],
+      "red_flags": [
+        "Hoarseness persisting more than 2-3 weeks, especially in smokers or those with significant alcohol use (exclude laryngeal malignancy)",
+        "Associated stridor/breathing difficulty",
+        "Hemoptysis",
+        "Significant unexplained weight loss"
+      ],
+      "when_to_refer": "Refer to ENT for laryngoscopy if hoarseness persists beyond 2-3 weeks or any red flag features present."
+    },
+    {
+      "id": "bppv",
+      "name": "Benign Paroxysmal Positional Vertigo (BPPV)",
+      "category": "Ear - Vestibular/Balance",
+      "definition": "The most common cause of vertigo, caused by displaced otoconia (calcium carbonate crystals) in the semicircular canals (most often posterior canal) triggering brief, intense vertigo with specific head movements.",
+      "symptoms": [
+        "brief episodes of spinning vertigo (seconds, usually <1 minute) triggered by head position change, e.g. rolling over in bed, looking up",
+        "nausea during episodes",
+        "no hearing loss or tinnitus (distinguishing from Meniere's disease)"
+      ],
+      "signs": [
+        "positive Dix-Hallpike test showing torsional/upbeating nystagmus with latency and fatigability (posterior canal BPPV)"
+      ],
+      "differential_diagnosis": [
+        "Vestibular neuritis (continuous vertigo, not positional)",
+        "Meniere's disease (associated hearing loss/tinnitus/aural fullness)",
+        "Central causes of vertigo (stroke -- especially if other neurological signs present)",
+        "Orthostatic hypotension"
+      ],
+      "investigations": [
+        "Dix-Hallpike maneuver is diagnostic for posterior canal BPPV",
+        "Supine roll test if lateral canal BPPV suspected",
+        "Imaging (MRI) only if atypical features or central cause suspected"
+      ],
+      "management": {
+        "first_line": "Canalith repositioning maneuvers -- Epley maneuver for posterior canal BPPV is first-line and highly effective, often single-session.",
+        "adjunct": "Vestibular rehabilitation exercises if recurrent or residual imbalance; vestibular suppressant medications generally not recommended for routine use as they can delay central compensation."
+      },
+      "complications": [
+        "Falls, especially in older adults",
+        "Persistent imbalance if untreated"
+      ],
+      "red_flags": [
+        "Vertigo with focal neurological deficits, severe headache, or inability to walk (consider central/stroke etiology -- 'HINTS' exam by a trained clinician can help differentiate)",
+        "New hearing loss (consider alternate diagnosis)"
+      ],
+      "when_to_refer": "Refer to ENT/audiovestibular specialist if diagnosis unclear, atypical nystagmus, or recurrent/refractory to repositioning maneuvers."
+    },
+    {
+      "id": "tinnitus",
+      "name": "Tinnitus",
+      "category": "Ear - Symptom/Syndrome",
+      "definition": "The perception of sound (ringing, buzzing, hissing) in the absence of an external auditory stimulus; a symptom rather than a single disease, with many possible underlying causes.",
+      "etiology": [
+        "Age-related or noise-induced hearing loss (most common association)",
+        "Cerumen impaction",
+        "Ototoxic medications (e.g. aminoglycosides, high-dose aspirin, some chemotherapy agents)",
+        "Meniere's disease",
+        "Vestibular schwannoma (acoustic neuroma) -- important to exclude if unilateral",
+        "Pulsatile tinnitus: vascular causes (e.g. AV malformation, glomus tumor, venous hum) -- warrants further workup"
+      ],
+      "symptoms": [
+        "subjective ringing/buzzing/hissing sound",
+        "may be constant or intermittent",
+        "unilateral or bilateral",
+        "pulsatile tinnitus (synchronous with heartbeat) is a distinct red-flag pattern"
+      ],
+      "signs": [
+        "often no abnormal findings on examination; assess for cerumen, TM abnormality, and perform hearing assessment"
+      ],
+      "differential_diagnosis": [
+        "Sensorineural hearing loss-associated tinnitus (most common)",
+        "Vestibular schwannoma (unilateral tinnitus + asymmetric hearing loss)",
+        "Pulsatile tinnitus causes (vascular)"
+      ],
+      "investigations": [
+        "Audiometry in all persistent tinnitus cases",
+        "MRI internal auditory canals if unilateral tinnitus with asymmetric sensorineural hearing loss (to exclude vestibular schwannoma)",
+        "Further vascular imaging if pulsatile tinnitus"
+      ],
+      "management": {
+        "general": "Treat underlying cause if identified (e.g. remove cerumen, review ototoxic medications); hearing aids can help if associated hearing loss present.",
+        "chronic_bothersome_tinnitus": "Sound therapy/masking devices, cognitive behavioral therapy, tinnitus retraining therapy can help reduce distress; no universally curative pharmacological treatment exists."
+      },
+      "complications": [
+        "Sleep disturbance",
+        "Anxiety/depression related to chronic tinnitus",
+        "Concentration difficulties"
+      ],
+      "red_flags": [
+        "Unilateral tinnitus with asymmetric hearing loss (exclude vestibular schwannoma)",
+        "Pulsatile tinnitus (consider vascular cause)",
+        "Associated neurological symptoms"
+      ],
+      "when_to_refer": "Refer to ENT/audiology for persistent tinnitus, any unilateral tinnitus, or pulsatile tinnitus."
+    },
+    {
+      "id": "obstructive_sleep_apnea",
+      "name": "Obstructive Sleep Apnea (OSA) - Adult",
+      "category": "Throat/Airway - Sleep Disorder",
+      "definition": "Repeated episodes of partial or complete upper airway obstruction during sleep, causing intermittent hypoxia and sleep fragmentation.",
+      "risk_factors": [
+        "obesity",
+        "large neck circumference",
+        "male sex",
+        "retrognathia/craniofacial abnormalities",
+        "enlarged tonsils/adenoids (especially relevant in children)",
+        "alcohol/sedative use",
+        "family history"
+      ],
+      "symptoms": [
+        "loud snoring",
+        "witnessed apneas by a bed partner",
+        "excessive daytime sleepiness",
+        "morning headaches",
+        "poor concentration",
+        "nocturia"
+      ],
+      "signs": [
+        "elevated BMI/neck circumference",
+        "crowded oropharynx (e.g. high Mallampati score, enlarged tonsils)",
+        "retrognathia"
+      ],
+      "differential_diagnosis": [
+        "Primary snoring without apnea",
+        "Central sleep apnea",
+        "Insomnia/other sleep disorders",
+        "Narcolepsy (for daytime sleepiness)"
+      ],
+      "investigations": [
+        "Polysomnography (sleep study) is the diagnostic gold standard, measuring the Apnea-Hypopnea Index (AHI)",
+        "Home sleep apnea testing for selected uncomplicated cases",
+        "Screening questionnaires (e.g. STOP-BANG, Epworth Sleepiness Scale) to guide referral"
+      ],
+      "management": {
+        "first_line": "Weight loss, positional therapy, avoidance of alcohol/sedatives before sleep; CPAP (continuous positive airway pressure) is first-line for moderate-severe OSA.",
+        "alternatives": "Mandibular advancement devices for mild-moderate OSA or CPAP-intolerant patients; surgical options (e.g. tonsillectomy/adenoidectomy in children with adenotonsillar hypertrophy, or various upper airway surgeries in select adults) depending on anatomy and severity."
+      },
+      "complications": [
+        "Hypertension",
+        "Cardiovascular disease/arrhythmias",
+        "Stroke risk",
+        "Motor vehicle accidents from daytime sleepiness",
+        "Metabolic syndrome association"
+      ],
+      "red_flags": [
+        "Severe daytime sleepiness affecting driving safety",
+        "Witnessed apneas with cyanosis",
+        "Uncontrolled hypertension/cardiac symptoms in the context of suspected OSA"
+      ],
+      "when_to_refer": "Refer to sleep medicine/ENT for polysomnography and management planning if OSA suspected clinically."
+    },
+    {
+      "id": "sialadenitis",
+      "name": "Sialadenitis (Salivary Gland Infection/Inflammation)",
+      "category": "Salivary Gland - Infection/Inflammatory",
+      "definition": "Inflammation of a salivary gland (most often parotid or submandibular), which may be infective (bacterial or viral) or due to obstruction (sialolithiasis/stones).",
+      "etiology": [
+        "Bacterial (often Staph aureus) -- typically associated with dehydration/reduced salivary flow, post-operative patients",
+        "Viral (e.g. mumps -- parotitis)",
+        "Obstructive/calculus-related (sialolithiasis), more common in the submandibular gland due to viscous saliva and an uphill duct course"
+      ],
+      "symptoms": [
+        "painful swelling of the affected gland",
+        "pain worsened by eating (classic for obstructive/stone-related cases, as saliva flow increases)",
+        "fever if infective",
+        "purulent discharge from the duct opening if bacterial"
+      ],
+      "signs": [
+        "tender, swollen gland",
+        "erythema over the gland if infective",
+        "pus expressible from Stensen's (parotid) or Wharton's (submandibular) duct on gland massage",
+        "palpable stone along duct course in some cases"
+      ],
+      "differential_diagnosis": [
+        "Salivary gland tumor (usually painless, gradually enlarging)",
+        "Lymphadenitis (nodal, not glandular)",
+        "Dental abscess with facial swelling"
+      ],
+      "investigations": [
+        "Clinical exam with duct massage",
+        "Ultrasound to look for stones/abscess",
+        "CT if abscess or deep extension suspected",
+        "Sialography or CT/MR sialography for recurrent obstructive symptoms"
+      ],
+      "management": {
+        "acute_bacterial": "Hydration, warm compresses, gland massage, sialogogues (e.g. sour sweets) to stimulate flow, antibiotics covering Staph aureus.",
+        "abscess": "Drainage if abscess forms.",
+        "sialolithiasis": "Conservative measures first; sialendoscopy or surgical removal of the stone/gland for persistent/recurrent obstruction."
+      },
+      "complications": [
+        "Abscess formation",
+        "Chronic recurrent sialadenitis",
+        "Ductal stricture"
+      ],
+      "red_flags": [
+        "Rapidly spreading facial swelling/cellulitis",
+        "Airway compromise from floor-of-mouth swelling (Ludwig's angina, a surgical emergency)",
+        "Persistent painless mass (consider tumor, refer for further workup)"
+      ],
+      "when_to_refer": "Refer to ENT/maxillofacial for recurrent sialadenitis, suspected sialolithiasis needing intervention, or any suspicious mass."
+    },
+    {
+      "id": "vocal_cord_nodules",
+      "name": "Vocal Fold Nodules",
+      "category": "Throat/Voice - Benign Lesion",
+      "definition": "Benign, bilateral, symmetric callus-like lesions on the vocal folds at the junction of the anterior and middle thirds, resulting from chronic vocal abuse/misuse.",
+      "risk_factors": [
+        "occupational voice use (teachers, singers, call center workers)",
+        "chronic vocal strain/yelling",
+        "smoking (irritant, contributory)",
+        "concurrent laryngopharyngeal reflux"
+      ],
+      "symptoms": [
+        "chronic hoarseness",
+        "vocal fatigue",
+        "breathy or rough voice quality",
+        "reduced vocal range, especially for singers"
+      ],
+      "signs": [
+        "bilateral symmetric nodules at the junction of anterior 1/3 and posterior 2/3 of the vocal folds on laryngoscopy",
+        "an hourglass-shaped glottic gap on phonation"
+      ],
+      "differential_diagnosis": [
+        "Vocal fold polyp (usually unilateral)",
+        "Reinke's edema (diffuse, associated with smoking)",
+        "Laryngeal papillomatosis (HPV-related)",
+        "Laryngeal malignancy (must exclude if risk factors/persistent hoarseness)"
+      ],
+      "investigations": [
+        "Laryngoscopy/stroboscopy for diagnosis and to assess vocal fold vibration"
+      ],
+      "management": {
+        "first_line": "Voice therapy with a speech-language pathologist is first-line and often resolves nodules without surgery; address underlying vocal abuse and reflux if present.",
+        "surgical": "Microlaryngoscopic surgical removal reserved for nodules persisting despite adequate voice therapy."
+      },
+      "complications": [
+        "Chronic voice change if untreated",
+        "Impact on occupational voice users"
+      ],
+      "red_flags": [
+        "Hoarseness >2-3 weeks in smokers/older adults without clear benign cause (exclude malignancy)",
+        "Rapidly progressive symptoms",
+        "Associated stridor or airway concern"
+      ],
+      "when_to_refer": "Refer to ENT for laryngoscopy and voice therapy referral if hoarseness persists beyond 2-3 weeks."
+    }
+  ]
+}
