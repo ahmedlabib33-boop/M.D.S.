@@ -10,7 +10,7 @@ The UI permanently distinguishes `Ahmed Labib` in elite gold. Directly underneat
 
 ## Implemented application
 
-Folder `1` remains unchanged. Folder `2` is the combined application and contains a preserved copy of folder `1` under `legacy-ent/` plus downloadable originals under `public/downloads/`.
+Folder `1` remains unchanged. Folder `2` is the combined application and contains a preserved copy of folder `1` under `legacy-ent/`. Existing repository files under `public/downloads/` are retained for compatibility, but the application exposes no project-download controls.
 
 The dashboard provides:
 
@@ -23,10 +23,11 @@ The dashboard provides:
 - Live RxNorm normalization with official DailyMed labeling links
 - Condition-aware nutrition education and high-risk restriction rules
 - Live USDA FoodData Central lookup
-- iPhone 15 Pro Max LiDAR / TrueDepth JSON measurement import and validation
+- Named multi-patient records saved in IndexedDB on the current browser/device
+- Guided body-measurement entry plus iPhone 15 Pro Max LiDAR / TrueDepth import and validation
 - Local-only clinical photo intake with real resolution, exposure, contrast, and sharpness-signal checks
-- Current-session export and explicit no-persistence behavior
-- Medical-only source registry and original resource downloads
+- Per-patient and whole-vault JSON backup exports
+- Medical-only source registry without project download controls
 
 ## Real machine learning
 
@@ -57,14 +58,28 @@ npm run check:knowledge
 
 The generated files are committed/deployed as source data; Vercel does not need to download HPO at runtime.
 
+## Patient records and repository boundary
+
+The repository contains the application code and patient-vault implementation. It never contains real patient records. Named patient records use IndexedDB in the current browser, automatically save clinical context, measurements, and assessment history, and can be exported as a user-controlled JSON backup. The patient name is not sent to `/api/analyze`.
+
+This free default works on Vercel without a database key. It is device-specific and can be cleared by browser/site-data removal. Cross-device or multi-user clinical operation requires authentication, authorization, audit logging, encryption policy, and a compliant external database; the app does not imply those controls exist.
+
+Sex selection is limited to `Male` or `Female`, as requested.
+
 ## iPhone 15 Pro Max ingestion
 
-iOS Safari cannot expose raw ARKit or LiDAR APIs directly to a website. The functional workflow is:
+iOS Safari cannot expose raw ARKit or LiDAR APIs directly to a website. The normal workflow no longer requires JSON:
+
+1. Measure only the required dimension with the iPhone Measure app, a tape/ruler, or an appropriate clinical instrument.
+2. Enter the value beside its visible unit in the guided measurement screen.
+3. Select **Save entered measurements**. Values then auto-save to the active patient record on that device.
+
+The advanced companion workflow remains available:
 
 1. Use the preserved native Swift companion to capture supported ARKit, LiDAR, and TrueDepth geometry.
 2. Export the versioned JSON contract through Files or the iOS Share Sheet.
-3. Select the JSON file in Safari.
-4. `/api/measurements/validate` validates and normalizes it without persistence.
+3. Select the exported file in Safari; no manual JSON editing is required.
+4. The app validates and normalizes it, then saves accepted values to the active local patient record.
 
 USDZ and PLY files may be selected for session metadata, but this web app does not pretend to clinically interpret a 3D mesh. Measurement geometry is approximate and must be confirmed with appropriate clinical instruments.
 
@@ -106,9 +121,9 @@ python -X utf8 test_ent_assistant.py
 
 ## Privacy and safety
 
-- Patient context remains in current browser memory only.
+- Named patient records are stored in IndexedDB on the current browser/device and are never committed to Git.
 - `/api/analyze` is stateless and uses `no-store`.
-- No patient database or persistence API is included.
+- No server-side patient database or persistence API is included.
 - Server-owned keys belong in Vercel environment variables.
 - External inference may receive submitted text only when the corresponding key is configured.
 - Production handling of identifiable health information still requires a formal privacy policy, consent, security, clinical governance, and jurisdiction-specific compliance review.

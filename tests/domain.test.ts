@@ -2,7 +2,8 @@ import test from "node:test";
 import assert from "node:assert/strict";
 import { evaluateSafety } from "../lib/safety";
 import { nutritionGuidance } from "../lib/nutrition";
-import { measurementInsights, parseMeasurementImport, supportedMeasurementNames } from "../lib/measurements";
+import { createManualMeasurements, measurementInsights, parseMeasurementImport, supportedMeasurementNames } from "../lib/measurements";
+import { cleanPatientName, createPatientRecord, patientVaultBackup } from "../lib/patient-records";
 import { legacyEntResearch } from "../lib/legacy-ent";
 import manifest from "../data/source_manifest.json";
 
@@ -53,6 +54,28 @@ test("measurement context requires confirmation", () => {
   const insight = measurementInsights([{name: "neck_circumference_cm", value: 42, unit: "cm", confidence: "medium", source: "iphone_lidar"}]);
   assert.equal(insight.length, 1);
   assert.ok(insight[0].clinicalContext.toLowerCase().includes("confirm"));
+});
+
+test("guided measurements create real manual entries", () => {
+  const measurements = createManualMeasurements({height_cm: "178.4", pinna_height_mm: ""}, "Clinical instrument");
+  assert.equal(measurements.length, 1);
+  assert.equal(measurements[0].value, 178.4);
+  assert.equal(measurements[0].unit, "cm");
+  assert.equal(measurements[0].source, "manual");
+});
+
+test("patient records accept only male or female", () => {
+  const record = createPatientRecord({id: "patient-1", name: "  Ahmed   Test  ", sex: "male", now: "2026-08-15T00:00:00.000Z"});
+  assert.equal(record.name, "Ahmed Test");
+  assert.equal(record.context.sex, "male");
+  assert.throws(() => createPatientRecord({id: "patient-2", name: "Test", sex: "unknown" as never}));
+  assert.throws(() => cleanPatientName("A"));
+});
+
+test("patient vault backup contains no sample records", () => {
+  const backup = patientVaultBackup([], "2026-08-15T00:00:00.000Z");
+  assert.equal(backup.patients.length, 0);
+  assert.ok(backup.storageNotice.includes("not committed to Git"));
 });
 
 test("legacy ENT engine performs numeric ranking", () => {

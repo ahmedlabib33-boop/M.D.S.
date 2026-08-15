@@ -125,7 +125,7 @@ export async function analyzePatientContext(ctx: PatientContext): Promise<Analys
       ontologyDiseaseMap: diseaseMapAvailable(),
       models,
       note:
-        (hpoIsFull() ? "Full synchronized HPO term index" : "Bundled HPO fallback seed") + "; " +
+        (hpoIsFull() ? "Full synchronized HPO term index" : "Local HPO fallback seed") + "; " +
         (diseaseMapAvailable() ? "HPO disease annotations active" : "disease-phenotype map not synchronized") +
         ". No synthetic classifier accuracy is reported.",
       timingsMs,
